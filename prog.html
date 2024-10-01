@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engineering and Technology Fields</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fff9c4;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            padding: 20px;
+        }
+        .field {
+            background-color: #fff59d;
+            border: 1px solid #ffd54f;
+            padding: 15px;
+            text-align: center;
+            font-size: 14px;
+            font-weight: bold;
+            transition: background-color 0.3s, transform 0.3s;
+            cursor: pointer;
+        }
+        .field:hover {
+            background-color: #ffeb3b;
+            transform: scale(1.05);
+        }
+        @media (max-width: 768px) {
+            .grid {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1></h1>
+        <div class="grid" id="fieldsGrid"></div>
+    </div>
+
+    <script>
+        const fields = [
+            "COMPUTER SCIENCE ENGINEERING",
+            "CSE WITH ARTIFICIAL INTELLIGENCE",
+            "CSE WITH BLOCKCHAIN TECHNOLOGY",
+            "CSE WITH CYBER SECURITY",
+            "ELECTRONICS AND COMMUNICATION",
+            "ELECTRICAL AND ELECTRONICS ENGINEERING",
+            "MECHANICAL ENGINEERING",
+            "CIVIL AND STRUCTURAL ENGINEERING",
+            "BACHELOR OF SCIENCE [B.SC]",
+            "BACHELOR OF COMPUTER APPLICATIONS [BCA]",
+            "INFORMATION TECHNOLOGY ENGINEERING",
+            "CHEMICAL AND PROCESS ENGINEERING",
+            "AERONAUTICAL ENGINEERING",
+            "BIOMEDICAL AND CLINICAL ENGINEERING",
+            "BIOTECHNOLOGY ENGINEERING",
+            "AUTOMOBILE AND MOBILITY ENGINEERING",
+            "PETROLEUM AND GAS ENGINEERING",
+            "METALLURGICAL AND MATERIALS ENGINEERING",
+            "ENVIRONMENTAL AND SUSTAINABILITY ENGINEERING",
+            "MINING AND GEOTECHNICAL ENGINEERING"
+        ];
+
+        const gridElement = document.getElementById('fieldsGrid');
+
+        fields.forEach(field => {
+            const fieldElement = document.createElement('div');
+            fieldElement.className = 'field';
+            fieldElement.textContent = field;
+            fieldElement.addEventListener('click', () => alert(`You clicked on ${field}`));
+            gridElement.appendChild(fieldElement);
+        });
+    </script>
+</body>
+</html>

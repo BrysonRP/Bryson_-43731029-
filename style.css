@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #fff;
+    border-bottom: 2px solid #000;
+    padding: 10px 0;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    padding: 10px 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+
+.download-btn {
+    background-color: red;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+}
+
+.membership {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-image img {
+    width: 300px;
+    height: 500px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card-details {
+    margin-left: 40px;
+}
+
+.card-details h1 {
+    font-size: 24px;
+    color: #c0873c;
+    letter-spacing: 3px;
+}
+
+.card-details h2 {
+    font-size: 40px;
+    color: #000;
+}
+
+.card-details ul {
+    list-style: none;
+    padding: 10px 0;
+}
+
+.card-details ul li {
+    background-color: #fadea3;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #444;
+}
+
+.cta-btn {
+    display: inline-block;
+    margin-top: 20px;
+    background-color: red;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+.hover-underline {
+    position: relative;
+}
+.hover-underline::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background-color: rgb(219, 129, 26);
+    transition: all 0.3s ease;
+}
+.hover-underline:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    .hover-item {
+        width: 100%;
+    }
+}
